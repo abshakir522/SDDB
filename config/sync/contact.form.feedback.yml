@@ -1,0 +1,14 @@
+uuid: bb09a47f-d6df-4940-89e9-2383cd661655
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - abdullahshakir82@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

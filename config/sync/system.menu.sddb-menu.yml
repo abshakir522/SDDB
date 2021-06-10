@@ -1,0 +1,8 @@
+uuid: 763153aa-5821-4095-991d-73d04f395b84
+langcode: en
+status: true
+dependencies: {  }
+id: sddb-menu
+label: 'SDDB Menu'
+description: ''
+locked: false

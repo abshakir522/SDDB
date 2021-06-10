@@ -1,0 +1,25 @@
+uuid: 9460cc8a-e42e-439a-b186-850540ca79aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sddb-menu
+  module:
+    - system
+  theme:
+    - bartik
+id: sddbmenu
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:sddb-menu'
+settings:
+  id: 'system_menu_block:sddb-menu'
+  label: 'SDDB Menu'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
