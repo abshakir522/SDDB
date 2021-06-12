@@ -1,0 +1,21 @@
+uuid: e5f68bc9-551a-4b30-9267-d1d9f4f4250d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.client_budget
+  module:
+    - text
+id: taxonomy_term.client_budget.default
+targetEntityType: taxonomy_term
+bundle: client_budget
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

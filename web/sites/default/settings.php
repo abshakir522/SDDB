@@ -34,3 +34,4 @@ if (file_exists($local_settings)) {
 }
 
 $settings['config_sync_directory'] = '../config/sync';
+$settings['hash_salt']="abc123";

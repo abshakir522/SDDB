@@ -1,0 +1,46 @@
+uuid: d13b5734-5c7a-4c34-8430-0034eb9d26c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.company.body
+    - field.field.node.company.field_client_budget
+    - field.field.node.company.field_contact
+    - field.field.node.company.field_hourly_rate
+    - field.field.node.company.field_industry
+    - field.field.node.company.field_map_address
+    - field.field.node.company.field_services
+    - field.field.node.company.field_slogan
+    - field.field.node.company.field_website_link
+    - node.type.company
+  module:
+    - text
+    - user
+id: node.company.teaser
+targetEntityType: node
+bundle: company
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_client_budget: true
+  field_contact: true
+  field_hourly_rate: true
+  field_industry: true
+  field_map_address: true
+  field_services: true
+  field_slogan: true
+  field_website_link: true

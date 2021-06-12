@@ -1,0 +1,22 @@
+uuid: dc35f03d-cc2a-49d6-ab66-957a8ac28fa4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sddb_sass_customtheme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: sddb_sass_customtheme_messages
+theme: sddb_sass_customtheme
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

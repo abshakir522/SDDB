@@ -1,0 +1,22 @@
+uuid: 632cd522-f9e6-4e83-8929-1a4386bff4ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sddb_sass_customtheme
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: sddb_sass_customtheme_breadcrumbs
+theme: sddb_sass_customtheme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

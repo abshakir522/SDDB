@@ -1,0 +1,8 @@
+uuid: bfaa0831-52f8-4217-ae4c-620346a0507f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Hourly Rate'
+vid: hourly_rate
+description: ''
+weight: 0
