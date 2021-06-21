@@ -1,0 +1,17 @@
+uuid: 60159a25-24ff-4598-926b-679dd88ae6bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Company
+type: company
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

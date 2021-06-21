@@ -1,0 +1,22 @@
+uuid: c2bd10a9-cec6-44d0-9c7d-07b9d35af1bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sddb_sass_customtheme
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: sddb_sass_customtheme_powered
+theme: sddb_sass_customtheme
+region: footer_fifth
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

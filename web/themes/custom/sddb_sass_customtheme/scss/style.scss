@@ -1,0 +1,127 @@
+/* 
+Theme Name: Bootstrap 4 Sass
+Description: Bootstrap 4 with Sass
+*/
+
+// import files
+@import "import";
+
+/* GENERAL STYLES
+-------------------------------------------------*/
+
+body {
+    background: $white;
+}
+
+
+/* COLORS 
+--------------------------------------------------*/
+
+a {
+    color: $accent-shade;
+}
+
+.bg-inverse {
+    background: $primary-shade !important;
+}
+
+.site-footer {
+    background: $accent-shade !important;
+}
+
+.menu--main li a {
+    color: $primary-shade;
+}
+
+.menu--account li a {
+    color: $primary-shade;
+}
+
+.site-name-slogan a {
+    text-decoration: none;
+}
+
+.card-group img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.card-group .field--type-image {
+    margin: 0
+}
+
+.slick {
+    width: 100%;
+}
+
+.slick>div {
+    margin: 0 15px;
+}
+
+
+//////////////////////////////////// my css///////////////////////////////////
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.company{
+  width: 100%;
+  margin: .5rem 0;
+  padding: 1rem;
+  border: #f2f2f2 2px solid;
+  &--logo{
+    padding: 1rem;
+    width: 150px;
+  }
+  &--info{
+
+    &--name{
+      font-size: 2rem;
+      font-weight: 400;
+      color: #17313b;
+    }:link{
+      text-decoration: none;
+      color: #17313b;
+    }
+  }
+  &--buttons{
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    height: 100%;
+    list-style: none;
+    margin: 0 -15px;
+    padding: 0;
+
+    li{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 10px;
+      border: 1px solid #f2f2f2;
+      a{
+        text-decoration: none;
+        color: #000;
+        transition: .2s all;
+      }:hover{
+        color: #900;
+      }
+    }:first-child a{
+      padding: 15px 20px;
+      background: #900;
+      border: 2px solid #900;
+      border-radius: 3px;
+      color: #f2f2f2;
+    }:first-child a:hover{
+      background: none;
+      color: #000;
+    }
+  
+  }
+}

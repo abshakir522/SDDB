@@ -1,0 +1,8 @@
+uuid: 31e78bf7-9d41-4a1e-88ac-0a2ee4980b8c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Client Budget'
+vid: client_budget
+description: ''
+weight: 0

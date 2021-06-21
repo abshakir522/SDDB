@@ -1,0 +1,25 @@
+uuid: 885ce7f6-3729-48b8-82e4-18e346917fd4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sddb_sass_customtheme
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: sddb_sass_customtheme_branding
+theme: sddb_sass_customtheme
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

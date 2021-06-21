@@ -1,0 +1,126 @@
+uuid: d13b5734-5c7a-4c34-8430-0034eb9d26c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.company.body
+    - field.field.node.company.field_client_budget
+    - field.field.node.company.field_company_logo
+    - field.field.node.company.field_contact
+    - field.field.node.company.field_hourly_rate
+    - field.field.node.company.field_industry
+    - field.field.node.company.field_map_address
+    - field.field.node.company.field_number_of_employees
+    - field.field.node.company.field_rating
+    - field.field.node.company.field_services
+    - field.field.node.company.field_slogan
+    - field.field.node.company.field_website_link
+    - node.type.company
+  module:
+    - fivestar
+    - image
+    - link
+    - text
+    - user
+id: node.company.teaser
+targetEntityType: node
+bundle: company
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 3
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_client_budget:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_company_logo:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_hourly_rate:
+    type: entity_reference_label
+    weight: 5
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_map_address:
+    type: string
+    weight: 6
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_number_of_employees:
+    type: number_integer
+    weight: 7
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_rating:
+    type: fivestar_stars
+    weight: 2
+    region: content
+    label: above
+    settings:
+      text_format: average
+      display_format: average
+      fivestar_widget: basic
+    third_party_settings: {  }
+  field_services:
+    type: entity_reference_label
+    weight: 10
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_slogan:
+    type: string
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_website_link:
+    type: link
+    weight: 8
+    region: content
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  links:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_contact: true
+  field_industry: true

@@ -1,0 +1,52 @@
+uuid: 070e1221-9ac9-4ab4-91d1-7a8d7aec6f9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.client_budget.field_client_budget_number
+    - taxonomy.vocabulary.client_budget
+  module:
+    - path
+    - text
+id: taxonomy_term.client_budget.default
+targetEntityType: taxonomy_term
+bundle: client_budget
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_client_budget_number:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+hidden: {  }

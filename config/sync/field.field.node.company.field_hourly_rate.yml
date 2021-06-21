@@ -1,0 +1,29 @@
+uuid: f4060fa5-8dfd-4ec8-9d5e-5d1e5b14ca5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hourly_rate
+    - node.type.company
+    - taxonomy.vocabulary.hourly_rate
+id: node.company.field_hourly_rate
+field_name: field_hourly_rate
+entity_type: node
+bundle: company
+label: 'Hourly Rate'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      hourly_rate: hourly_rate
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,25 @@
+uuid: c5be388d-aa00-496e-9868-0350b47eb17b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_client_budget_number
+    - taxonomy.vocabulary.client_budget
+id: taxonomy_term.client_budget.field_client_budget_number
+field_name: field_client_budget_number
+entity_type: taxonomy_term
+bundle: client_budget
+label: 'Client Budget Number'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: integer

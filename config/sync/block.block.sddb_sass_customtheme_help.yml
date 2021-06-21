@@ -1,0 +1,22 @@
+uuid: c46aadd1-ac0b-42a6-80b2-709d0af3245d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - sddb_sass_customtheme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: sddb_sass_customtheme_help
+theme: sddb_sass_customtheme
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

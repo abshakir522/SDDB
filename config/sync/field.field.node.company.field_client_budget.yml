@@ -1,0 +1,29 @@
+uuid: ed780d63-6d24-40fe-9162-056697b52593
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_client_budget
+    - node.type.company
+    - taxonomy.vocabulary.client_budget
+id: node.company.field_client_budget
+field_name: field_client_budget
+entity_type: node
+bundle: company
+label: 'Client Budget'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      client_budget: client_budget
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

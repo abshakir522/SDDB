@@ -1,0 +1,22 @@
+uuid: 559d6d09-cc7e-4c6f-b68f-511f13a228e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sddb_sass_customtheme
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: sddb_sass_customtheme_content
+theme: sddb_sass_customtheme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
