@@ -47,7 +47,6 @@ module:
   simple_gmap: 0
   system: 0
   taxonomy: 0
-  taxonomy_menu: 0
   telephone: 0
   text: 0
   token: 0
