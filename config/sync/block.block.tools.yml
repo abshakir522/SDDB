@@ -1,4 +1,4 @@
-uuid: 6a43d54c-db41-4c67-b8d7-ce0f116d6d4c
+uuid: 8748899d-e9e7-4498-89ba-8cdd4e7b04f3
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,7 @@ dependencies:
     - system
   theme:
     - sddb_sass_customtheme
-_core:
-  default_config_hash: rH6PpAn7-RScha1rGkohGAYSSh_1OVeZzioJPzPw6O4
-id: sddb_sass_customtheme_tools
+id: tools
 theme: sddb_sass_customtheme
 region: sidebar_first
 weight: 0
@@ -24,4 +22,8 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /list-companies
+    negate: true

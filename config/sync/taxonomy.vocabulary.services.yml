@@ -1,7 +1,14 @@
 uuid: c4a65b65-a94e-48e9-bc5e-6d7645dd9de4
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - services
+    parent: 'services:'
 name: Services
 vid: services
 description: ''
