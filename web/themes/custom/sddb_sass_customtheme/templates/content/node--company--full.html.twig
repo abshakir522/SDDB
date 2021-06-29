@@ -1,0 +1,251 @@
+{#
+/**
+ * @file
+ * Bootstrap Barrio's theme implementation to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+     Only "getter" methods (method names starting with "get", "has", or "is")
+     and a few common methods such as "id" and "label" are available. Calling
+     other methods (such as node.delete) will result in an exception.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ */
+#}
+{{ attach_library('bootstrap_barrio/node') }}
+{{ attach_library('sddb_sass_customtheme/venobox') }}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  <header>
+    {{ title_prefix }}
+    {% if label and not page %}
+      <h2{{ title_attributes.addClass('node__title') }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% if display_submitted %}
+      <div class="node__meta">
+        {{ author_picture }}
+        {% block submitted %}
+          <em{{ author_attributes }}>
+            {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          </em>
+        {% endblock %}
+        {{ metadata }}
+      </div>
+    {% endif %}
+  </header>
+  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+    {# <ul class="buttons buttons--position">
+    <li><a href="{{ content.field_website_link.0.url }}" class="company-website">Visit Website</a></li>
+    <li><a href="#" class="company-website">View Profile</a></li>
+    <li>{{ content.field_contact.0 }}</li>
+   </ul> #}
+    <main class="container">
+      <nav class="sticky-navbar navbar navbar-expand-md navbar-light bg-light  p-0">
+        <div class="company-brand">
+          <div class="company__logo"><img src="{{ content.field_company_logo.0 }}" alt="" class="img-fluid"></div>
+          <a href="{{ content.field_website_link.0.url }}" class="company__name">{{ label }}</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-details"
+        aria-controls="nav-details" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="nav-details">
+          <ul class="navbar-nav navbar-nav pl-2 pr-2 w-100 justify-content-between">
+            <li class="nav-item active-link">
+              <a class="nav-link" href="#summary">Summary</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#focus">Focus</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#reviews">Reviews</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Verification</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="details-section d-flex justify-content-center" id="summary">
+        <div class="company">
+          <div class="row details-body">
+            <div class="col-8 slogan">
+              <p class="company--slogn text-muted m-0">{{ content.field_slogan.0 }} </p>
+              <div class="review-stars">
+                {{ content.field_rating.0 }}
+              </div>
+            </div>
+            <div class="col-5">
+              <p class="company--body">{{ content.body.0 }}</p>
+            </div>
+            <div class="col-3 ">
+              <p class="text-muted"><i class="fas fa-hand-holding-usd"></i> &nbsp; {{ content.field_client_budget.0 }}</p>
+              <p class="text-muted"><i class="far fa-clock"></i> &nbsp; {{ content.field_hourly_rate.0 }}</p>
+              <p class="text-muted"><i class="fas fa-user"></i> &nbsp; {{ content.field_number_of_employees.0 }}</p>
+              <p class="text-muted"><i class="far fa-flag"></i> &nbsp; {{ content.field_client_budget.0 }}</p>
+            </div>
+
+            <div class="col-md-4 company--map">
+              {{ content.field_map_address.0 }}
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container section-separater">
+      </div>
+      {{ content|without('field_map_address','field_client_budget','field_number_of_employees','field_hourly_rate','field_client_budget','field_rating','field_slogan','body','lable','field_company_logo','field_contact','field_website_link','field_services','field_industry') }}
+      
+          {# <!-- ======= Our Review Section ======= -->
+      <section class="review" id="reviews">
+        <div class="container">
+          <div class="section-title">
+            <h2>Reviews</h2>
+            <div class="review-stars">
+              <span class="number">4.5</span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <p class="text-muted text-uppercase">The PROJECT</p>
+              <h3>Mobile and Web App Dev for Tabletop Game Company</h3>
+              <p><i class="fas fa-desktop"></i> Mobile App Development</p>
+              <p><i class="fas fa-dollar-sign"></i> $50,000 to $199,999</p>
+              <p><i class="far fa-calendar-check"></i> Dec. 2019 - Nov. 2020</p>
+              <hr>
+              <p>Project summary:</p>
+              <p class="text-muted">MentorMate redesigned and developed a mobile and web app for a tabletop game company.
+                They revamped the platform’s UI/UX, redesigned the menus, and improved its functionality.</p>
+            </div>
+            <div class="col-lg-5">
+              <div class="row">
+                <div class="col-6">
+                  <p class="text-muted text-uppercase">the review</p>
+                  <q>We faced several challenges, and they were able to identify several different ways to resolve
+                    them.</q>
+                  <p class="text-muted text-uppercase">may 11, 2021</p>
+                  <hr>
+                </div>
+                <div class="col-6">
+                  <div class="review-stars">
+                    <span class="number">4.5</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <hr>
+                  <table>
+                    <tr>
+                      <td class="text-muted">Quality: </td>
+                      <td>4.5</td>
+                    </tr>
+                    <tr>
+                      <td class="text-muted">Schedule: </td>
+                      <td>4.5</td>
+                    </tr>
+                    <tr>
+                      <td class="text-muted">Cost: </td>
+                      <td>4.5</td>
+                    </tr>
+                    <tr>
+                      <td class="text-muted">Willing to refer: &nbsp;</td>
+                      <td>4.5</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <p>Feedback summary:</p>
+              <p class="text-muted">
+                Compatible with iOS and Android, the app functions well and accurately reflects the game. Eager to find
+                effective solutions, MentorMate asked questions and even played the game to get a better understanding of
+                the platform’s significance in the game. Great partners, they were also communicative. </p>
+            </div>
+            <div class="col-lg-3">
+              <p class="text-muted text-uppercase">The reviewer</p>
+              <h4>Miniatures Manager, Tabletop Game Company</h4>
+              <i class="far fa-user fa-3x"></i>
+              <hr>
+              <p class="text-muted"><i class="fas fa-industry"></i> Arts,Entertainment and Music</p>
+              <p class="text-muted"><i class="fas fa-user-alt"></i> 51-200 Employees</p>
+              <p class="text-muted"><i class="fas fa-map-marker-alt"></i> Roseville, Minnesota</p>
+              <p class="text-muted"><i class="fas fa-comments"></i> Phone Interview</p>
+              <p class="text-muted"><i class="fas fa-bullseye"></i> Verified</p>
+            </div>
+          </div>
+        </div>
+      </section> #}
+      {# <div class="container section-separater">
+      </div> #}
+    </main>
+  </div>
+</article>

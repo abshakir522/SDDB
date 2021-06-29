@@ -1,0 +1,23 @@
+uuid: e7a81404-0685-4796-907d-19f6919d9858
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.review
+  module:
+    - text
+id: node.review.body
+field_name: body
+entity_type: node
+bundle: review
+label: 'Project Summary'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

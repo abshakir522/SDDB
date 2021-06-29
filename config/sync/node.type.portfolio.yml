@@ -1,0 +1,17 @@
+uuid: d96d03ea-1683-4c0a-bbd8-a57ff9d40837
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Portfolio
+type: portfolio
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

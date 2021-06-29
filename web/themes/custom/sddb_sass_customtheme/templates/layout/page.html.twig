@@ -140,7 +140,7 @@
                   {{ page.content }}
                 </section>
               </main>
-            {% if page.sidebar_first %}
+            {% if page.sidebar_first| render %}
               <div{{ sidebar_first_attributes }}>
                 <aside class="section" role="complementary">
                   {{ page.sidebar_first }}

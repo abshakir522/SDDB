@@ -1,0 +1,29 @@
+uuid: a83e5e95-fa6b-469d-a23b-974e224eb01a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company
+    - node.type.company
+    - node.type.portfolio
+id: node.portfolio.field_company
+field_name: field_company
+entity_type: node
+bundle: portfolio
+label: Company
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      company: company
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

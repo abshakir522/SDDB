@@ -1,33 +1,33 @@
-uuid: 01a231f9-7b5d-4a91-ae58-c5bac50f63b7
+uuid: c70bf2f0-47d9-4f66-8076-774fc00cce1c
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.charts
+    - views.view.company_portfolio
   module:
     - node
     - views
   theme:
     - sddb_sass_customtheme
-id: views_block__charts_block_1
+id: views_block__company_portfolio_block_1
 theme: sddb_sass_customtheme
-region: sidebar_first
-weight: 0
+region: content
+weight: -3
 provider: null
-plugin: 'views_block:charts-block_1'
+plugin: 'views_block:company_portfolio-block_1'
 settings:
-  id: 'views_block:charts-block_1'
+  id: 'views_block:company_portfolio-block_1'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
+  context_mapping: {  }
 visibility:
   node_type:
     id: node_type
     bundles:
-      article: article
-      page: page
+      company: company
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'

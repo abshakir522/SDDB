@@ -1,0 +1,21 @@
+uuid: bcb97354-5117-4bff-8d67-0f14426aaeb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feedback_summary
+    - node.type.review
+  module:
+    - text
+id: node.review.field_feedback_summary
+field_name: field_feedback_summary
+entity_type: node
+bundle: review
+label: 'Feedback Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

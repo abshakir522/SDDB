@@ -1,0 +1,29 @@
+uuid: 10ea0de9-4fa5-4851-97a6-ec3728e63b0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_review_stars
+    - node.type.review
+  module:
+    - fivestar
+id: node.review.field_review_stars
+field_name: field_review_stars
+entity_type: node
+bundle: review
+label: 'Star Rating'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  stars: 5
+  allow_clear: false
+  allow_revote: true
+  allow_ownvote: true
+  rated_while: editing
+  enable_voting_target: false
+  target_bridge_field: ''
+  target_fivestar_field: ''
+field_type: fivestar

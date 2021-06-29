@@ -11,3 +11,13 @@ global-styling:
   dependencies:
     - core/jquery
     - core/drupal
+venobox:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.js: { type: external }
+  css:
+    component:
+      //cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.css: { type: external }
+fontawesome-icon:
+  css:
+    component:
+      //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css: { type: external }
