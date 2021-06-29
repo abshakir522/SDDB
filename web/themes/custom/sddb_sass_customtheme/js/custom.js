@@ -12,6 +12,13 @@
 
       // Custom code here
 
+
+      // venobox
+      $(document).ready(function () {
+        $('.venobox').venobox();
+      });
+
+
     }
   };
 

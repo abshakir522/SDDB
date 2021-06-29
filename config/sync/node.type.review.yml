@@ -1,0 +1,17 @@
+uuid: b14fb495-3ab9-4995-b986-5db2151f7102
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Review
+type: review
+description: 'A list of reviews given to the company'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
