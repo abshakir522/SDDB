@@ -1,0 +1,23 @@
+uuid: a93b54ad-ff84-4b73-b497-2b1646217ad7
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.storage.comment.field_company_size
+id: comment.review.field_company_size
+field_name: field_company_size
+entity_type: comment
+bundle: review
+label: 'Company Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

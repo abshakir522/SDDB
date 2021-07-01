@@ -1,0 +1,21 @@
+uuid: 2228323b-958e-4aa2-af59-3d2851541bd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.storage.comment.field_project_start
+  module:
+    - datetime
+id: comment.review.field_project_start
+field_name: field_project_start
+entity_type: comment
+bundle: review
+label: 'Project Start'
+description: 'Start date of the project'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

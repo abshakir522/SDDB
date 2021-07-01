@@ -1,0 +1,29 @@
+uuid: 242b0956-1d09-4596-8cf8-373fd3b6d90d
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.storage.comment.field_select_type_of_project
+    - taxonomy.vocabulary.services
+id: comment.review.field_select_type_of_project
+field_name: field_select_type_of_project
+entity_type: comment
+bundle: review
+label: 'Select Type of Project'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      services: services
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

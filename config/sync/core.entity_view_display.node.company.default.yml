@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.company.body
+    - field.field.node.company.field_add_a_review
     - field.field.node.company.field_client_budget
     - field.field.node.company.field_company_logo
     - field.field.node.company.field_contact
@@ -148,4 +149,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_add_a_review: true

@@ -1,0 +1,20 @@
+uuid: 5520b38f-8fa9-45d1-818b-188931810cf1
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+id: comment.field_company_size
+field_name: field_company_size
+entity_type: comment
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

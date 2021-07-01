@@ -1,0 +1,129 @@
+uuid: 3c94d73c-411c-4d55-b968-23fc06fd13dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.field.comment.review.comment_body
+    - field.field.comment.review.field_city_country
+    - field.field.comment.review.field_company_name
+    - field.field.comment.review.field_company_size
+    - field.field.comment.review.field_cost_rang
+    - field.field.comment.review.field_feedback_summary
+    - field.field.comment.review.field_position_title
+    - field.field.comment.review.field_project_end
+    - field.field.comment.review.field_project_start
+    - field.field.comment.review.field_project_title
+    - field.field.comment.review.field_select_type_of_project
+    - field.field.comment.review.field_the_review
+    - field.field.comment.review.field_the_reviewer_name_you_
+  module:
+    - datetime
+    - text
+id: comment.review.default
+targetEntityType: comment
+bundle: review
+mode: default
+content:
+  author:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_city_country:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_company_name:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_company_size:
+    weight: 12
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_cost_rang:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_feedback_summary:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_position_title:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_project_end:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_project_start:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_project_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_select_type_of_project:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_the_review:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_the_reviewer_name_you_:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  subject: true

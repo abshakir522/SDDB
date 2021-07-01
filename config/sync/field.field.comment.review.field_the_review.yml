@@ -1,0 +1,21 @@
+uuid: 84c26a86-6e65-4982-9aa2-b45349436f1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.storage.comment.field_the_review
+  module:
+    - text
+id: comment.review.field_the_review
+field_name: field_the_review
+entity_type: comment
+bundle: review
+label: 'The Review'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

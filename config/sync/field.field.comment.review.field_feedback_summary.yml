@@ -1,0 +1,21 @@
+uuid: 52f9ceb0-fac0-401f-89de-aaf06d3276f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.storage.comment.field_feedback_summary
+  module:
+    - text
+id: comment.review.field_feedback_summary
+field_name: field_feedback_summary
+entity_type: comment
+bundle: review
+label: 'Feedback Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
