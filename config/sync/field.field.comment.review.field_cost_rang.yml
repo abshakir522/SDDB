@@ -1,0 +1,29 @@
+uuid: 630df2f5-d101-4f8a-971a-d8f56150b204
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.storage.comment.field_cost_rang
+    - taxonomy.vocabulary.client_budget
+id: comment.review.field_cost_rang
+field_name: field_cost_rang
+entity_type: comment
+bundle: review
+label: 'Cost Rang'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      client_budget: client_budget
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

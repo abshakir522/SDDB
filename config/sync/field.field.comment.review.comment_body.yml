@@ -1,0 +1,21 @@
+uuid: f09a6a99-c993-450e-9597-50b2f4a76d6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.review.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: review
+label: 'Project Summary'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

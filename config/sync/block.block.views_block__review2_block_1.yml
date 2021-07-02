@@ -1,22 +1,22 @@
-uuid: 241191d3-7c51-437c-9a4a-00025c8e17a4
+uuid: 10fe4978-c205-42ef-9d20-b02644cc8798
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.reviews
+    - views.view.review2
   module:
     - node
     - views
   theme:
     - sddb_sass_customtheme
-id: views_block__reviews_block_1
+id: views_block__review2_block_1
 theme: sddb_sass_customtheme
 region: content
 weight: 0
 provider: null
-plugin: 'views_block:reviews-block_1'
+plugin: 'views_block:review2-block_1'
 settings:
-  id: 'views_block:reviews-block_1'
+  id: 'views_block:review2-block_1'
   label: ''
   provider: views
   label_display: '0'

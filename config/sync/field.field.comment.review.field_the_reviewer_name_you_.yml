@@ -1,0 +1,19 @@
+uuid: 5baa795d-1a4f-40b0-8a1a-b0471fac8f17
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.storage.comment.field_the_reviewer_name_you_
+id: comment.review.field_the_reviewer_name_you_
+field_name: field_the_reviewer_name_you_
+entity_type: comment
+bundle: review
+label: 'Reviewer Full Name (You)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

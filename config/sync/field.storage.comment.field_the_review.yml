@@ -1,0 +1,19 @@
+uuid: c2b4bdb5-e493-44ce-a294-5d2b7e07a7bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - text
+id: comment.field_the_review
+field_name: field_the_review
+entity_type: comment
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

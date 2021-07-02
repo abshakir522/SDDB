@@ -1,0 +1,21 @@
+uuid: 877442bf-eef9-49f8-aaaa-71c8deeba96a
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.storage.comment.field_project_end
+  module:
+    - datetime
+id: comment.review.field_project_end
+field_name: field_project_end
+entity_type: comment
+bundle: review
+label: 'Project End'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

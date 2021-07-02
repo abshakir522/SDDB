@@ -1,0 +1,20 @@
+uuid: a4d9d748-0508-417d-8206-94b6338097ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - taxonomy
+id: comment.field_cost_rang
+field_name: field_cost_rang
+entity_type: comment
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

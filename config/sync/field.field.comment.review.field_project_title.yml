@@ -1,0 +1,19 @@
+uuid: ffd3c4c2-223c-47b7-9f5d-66ce481b7264
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.storage.comment.field_project_title
+id: comment.review.field_project_title
+field_name: field_project_title
+entity_type: comment
+bundle: review
+label: 'Project Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+uuid: ce6d5a04-993a-41d2-a205-f9dee4b736f8
+langcode: en
+status: true
+dependencies: {  }
+id: review
+label: Review
+target_entity_type_id: node
+description: 'Content-type used to add a review on a company'

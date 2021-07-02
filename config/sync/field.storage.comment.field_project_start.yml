@@ -1,0 +1,20 @@
+uuid: deaa984a-68a8-4524-b2b1-ab8e043b7183
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - datetime
+id: comment.field_project_start
+field_name: field_project_start
+entity_type: comment
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
