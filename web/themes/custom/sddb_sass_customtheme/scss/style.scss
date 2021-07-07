@@ -506,6 +506,9 @@ main.container{
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   text-align: center;
   margin-bottom: 2rem;
+  .card-body{
+    min-height: 305px;
+  }
 }
 .feature-box__img{
   width: 100px;
@@ -521,7 +524,7 @@ a.feature-box__link:hover{
 }
 .taxonomy-terms {
   .row{
-    display: block;
+    justify-content: center;
     div {
       padding: 5px 0;
       &:hover{
@@ -831,7 +834,7 @@ a.feature-box__link:hover{
 --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
-  // display: none;
+  display: none;
   width: 40px;
   height: 40px;
   border-radius: 3px;
