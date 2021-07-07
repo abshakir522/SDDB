@@ -1,0 +1,25 @@
+uuid: b04094aa-3b77-4752-91d4-288c3fce8579
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e5f59323-569c-49f6-a400-25394646245a'
+  module:
+    - block_content
+  theme:
+    - sddb_sass_customtheme
+id: gototop
+theme: sddb_sass_customtheme
+region: footer_fifth
+weight: -6
+provider: null
+plugin: 'block_content:e5f59323-569c-49f6-a400-25394646245a'
+settings:
+  id: 'block_content:e5f59323-569c-49f6-a400-25394646245a'
+  label: 'Go to Top'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

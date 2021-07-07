@@ -1,0 +1,8 @@
+uuid: c829f083-18a4-465e-92fa-071381e05bbf
+langcode: en
+status: true
+dependencies: {  }
+id: hero_section
+label: 'Hero Section'
+revision: 0
+description: ''

@@ -1,0 +1,30 @@
+uuid: 4d5547f3-f444-4311-bd35-08faca932d50
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_section:f63addab-e63e-46a1-9f72-a6680d92f6f8'
+  module:
+    - block_content
+    - system
+  theme:
+    - sddb_sass_customtheme
+id: hero_section
+theme: sddb_sass_customtheme
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:f63addab-e63e-46a1-9f72-a6680d92f6f8'
+settings:
+  id: 'block_content:f63addab-e63e-46a1-9f72-a6680d92f6f8'
+  label: 'Hero Section'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

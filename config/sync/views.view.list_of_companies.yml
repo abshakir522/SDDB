@@ -71,9 +71,9 @@ display:
               autosubmit_textfield_delay: 500
               autosubmit_hide: true
               input_required: false
-              allow_secondary: false
+              allow_secondary: true
               secondary_label: 'Advanced options'
-              secondary_open: false
+              secondary_open: true
             filter:
               term_node_tid_depth:
                 plugin_id: bef
@@ -775,7 +775,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "      <div class=\"col-10\">\r\n        <div class=\"row\">\r\n          <div class=\"company__logo\"><img src=\"{{ field_company_logo }}\" alt=\"\" class=\"img-fluid\"></div>\r\n          <div class=\"company--info\">\r\n            <a href=\"{{ view_node }} \" class=\"company--info--name\">{{ title }} </a>\r\n            <span class=\"company--slogn text-muted\">{{ field_slogan }}  </span>\r\n          </div>\r\n        </div>\r\n        <div class=\"row\">\r\n          <div class=\"col-3 \">\r\n            <p class=\"text-muted\">{{ field_client_budget }} </p>\r\n            <p class=\"text-muted\">{{ field_hourly_rate }}</p>\r\n            <p class=\"text-muted\">{{ field_number_of_employees }} </p>\r\n            <p class=\"text-muted\">{{ field_map_address }} </p>\r\n          </div>\r\n          <div class=\"col-5\">service focus</div>\r\n          <div class=\"col-4\">{{ body }} </div>\r\n        </div>\r\n\r\n      </div>\r\n      <div class=\"col-2\">\r\n        <ul class=\"row buttons\">\r\n          <li><a href=\" {{ field_website_link }} \"  class=\"company-website\">Visit Website</a></li>\r\n          <li><a href=\"{{ view_node }} \" class=\"company-website\"> View Profile</a></li>\r\n          <li><a href=\"#\" class=\"company-website\">Contact</a></li>\r\n        </ul>\r\n      </div>\r\n"
+            text: "      <div class=\"col-10\">\r\n        <div class=\"row\">\r\n          <div class=\"company__logo\"><img src=\"{{ field_company_logo }}\" alt=\"\" class=\"img-fluid\"></div>\r\n          <div class=\"company--info\">\r\n            <a href=\"{{ view_node }} \" class=\"company--info--name\">{{ title }} </a>\r\n            <span class=\"company--slogn text-muted\">{{ field_slogan }}  </span>\r\n          </div>\r\n        </div>\r\n        <div class=\"row\">\r\n          <div class=\"col-3 \">\r\n            <p class=\"text-muted\"><i class=\"fas fa-hand-holding-usd\"></i> {{ field_client_budget }} </p>\r\n            <p class=\"text-muted\"><i class=\"far fa-clock\"></i> {{ field_hourly_rate }}</p>\r\n            <p class=\"text-muted\"><i class=\"fas fa-user\"></i> {{ field_number_of_employees }} </p>\r\n            <p class=\"text-muted\"><i class=\"fa fa-map-marker\"></i> {{ field_map_address }} </p>\r\n          </div>\r\n          <div class=\"col-5\">service focus</div>\r\n          <div class=\"col-4\">{{ body }} </div>\r\n        </div>\r\n\r\n      </div>\r\n      <div class=\"col-2\">\r\n        <ul class=\"row buttons\">\r\n          <li><a href=\" {{ field_website_link }} \"  class=\"company-website\">Visit Website</a></li>\r\n          <li><a href=\"{{ view_node }} \" class=\"company-website\"> View Profile</a></li>\r\n          <li><a href=\"#\" class=\"company-website\">Contact</a></li>\r\n        </ul>\r\n      </div>\r\n"
             make_link: false
             path: ''
             absolute: false

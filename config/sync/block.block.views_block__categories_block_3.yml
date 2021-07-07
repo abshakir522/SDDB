@@ -1,0 +1,24 @@
+uuid: f9f6ca5c-58a7-4eec-adc2-79dedf997d01
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.categories
+  module:
+    - views
+  theme:
+    - sddb_sass_customtheme
+id: views_block__categories_block_3
+theme: sddb_sass_customtheme
+region: footer_third
+weight: 0
+provider: null
+plugin: 'views_block:categories-block_3'
+settings:
+  id: 'views_block:categories-block_3'
+  label: Services
+  provider: views
+  label_display: visible
+  views_label: Services
+  items_per_page: none
+visibility: {  }

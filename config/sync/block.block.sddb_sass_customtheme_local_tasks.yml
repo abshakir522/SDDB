@@ -9,7 +9,7 @@ _core:
 id: sddb_sass_customtheme_local_tasks
 theme: sddb_sass_customtheme
 region: content
-weight: -7
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:
