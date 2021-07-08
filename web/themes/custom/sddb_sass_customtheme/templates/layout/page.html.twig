@@ -167,23 +167,37 @@
         </aside>
       </div>
     {% endif %}
-    <footer class="site-footer">
+    <footer id="footer">
       {% block footer %}
-        <div class="{{ container }}">
           {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-            <div class="site-footer__top clearfix">
-              {{ page.footer_first }}
-              {{ page.footer_second }}
-              {{ page.footer_third }}
-              {{ page.footer_fourth }}
+            <div class="footer-top">
+              <div class="{{ container }}">
+                <div class="row clearfix justify-content-between">
+                  <div class="col-lg-3 col-md-6 footer-info">
+                    {{ page.footer_first }}
+                  </div>
+                  <div class="col-lg-3 col-md-6 footer-links">
+                    {{ page.footer_second }}
+                    </div>
+                  <div class="col-lg-3 col-md-6 footer-links">
+                  {{ page.footer_third }}
+                  </div>
+                  {% if page.footer_fourth %}
+                  <div class="col-lg-3 col-md-6">
+                  {{ page.footer_fourth }}
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
             </div>
           {% endif %}
           {% if page.footer_fifth %}
-            <div class="site-footer__bottom">
-              {{ page.footer_fifth }}
+            <div class="{{ container }}">
+              <div class="copyright">
+                {{ page.footer_fifth }}
+              </div>
             </div>
           {% endif %}
-        </div>
       {% endblock %}
     </footer>
   </div>

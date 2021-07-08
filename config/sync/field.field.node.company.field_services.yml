@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_services
     - node.type.company
-    - taxonomy.vocabulary.services
+    - taxonomy.vocabulary.category
 id: node.company.field_services
 field_name: field_services
 entity_type: node
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      services: services
+      category: category
     sort:
       field: name
       direction: asc

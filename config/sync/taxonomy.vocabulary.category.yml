@@ -1,0 +1,8 @@
+uuid: fda4fc3f-449e-4cdf-b203-4bdcac87ad38
+langcode: en
+status: true
+dependencies: {  }
+name: Category
+vid: category
+description: ''
+weight: 0

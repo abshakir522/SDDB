@@ -1,0 +1,73 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main content
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    <div{{ content_attributes.addClass('content hero-image') }} style=" background-image: url('{{ content.field_background_image.0 }}');">
+      <div class="hero-text">
+        <h1 style="font-style: Georgia; color: #fff; font-size:50px;">{{ content.field_title.0 }}</h1>
+        <p>{{ content.field_sub_title.0 }}</p>
+        <a href="#category" class="nav-btn">SHOP NOW</button>
+        
+      </div>
+      {# <div class="hero-exclusions">
+        <a href="#popup1">
+          <p class="exclusions">*click here for details</p>
+        </a>
+      </div> #}
+
+      {# <div id="popup1" class="overlay">
+        <div class="popup">
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+            <br><br>
+            <h2>Promotional Information & Exclusions</h2>
+            This is a list of exclusions
+            <br><br><br>
+          </div>
+        </div>
+      </div> #}
+    <!--lightbox style popup goes here-->
+    </div>
+  {% endblock %}
+</div>
